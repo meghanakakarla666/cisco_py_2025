@@ -1,0 +1,2 @@
+Words List: ['python', 'is', 'simple']
+Words Tuple (UPPERCASE): ('PYTHON', 'IS', 'SIMPLE')

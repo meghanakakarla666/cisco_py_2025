@@ -1,4 +1,5 @@
-import repo
+import repo_pickle_dict as repo
+
 def menu():
     message = '''
 Options are:
@@ -17,7 +18,8 @@ Your Option:'''
         salary = float(input('Salary:'))
         is_active = (input('Active(y/n):').upper() == 'Y')
 
-        employee = (id, name, age, salary, is_active)
+        employee = {'id':id, 'name':name, 'age':age, 
+                    'salary':salary, 'is_active':is_active}
 
         repo.create_employee(employee)
 
@@ -41,7 +43,11 @@ Your Option:'''
         else:
             print(employee)
             salary = float(input('New Salary:'))
-            new_employee = (employee[0], employee[1], employee[2], salary, employee[4])
+            new_employee = {'id':employee['id'], 
+                'name':employee['name'], 
+                'age':employee['age'], 
+                'salary':salary, 
+                'is_active':employee['is_active']}
             repo.update(id, new_employee)
             print('Employee updated successfully.')
     elif choice == 5:

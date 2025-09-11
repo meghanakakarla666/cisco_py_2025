@@ -1,0 +1,2 @@
+Sorted List: ['cisco', 'kakarla', 'meghana']
+Sorted Tuple: ('cisco', 'kakarla', 'meghana')
