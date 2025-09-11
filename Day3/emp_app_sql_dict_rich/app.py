@@ -20,10 +20,17 @@ Your Option:'''
 
         employee = {'id':id, 'name':name, 'age':age, 
                     'salary':salary, 'is_active':is_active}
+        
+        try:
 
-        repo.create_employee(employee)
+            repo.create_employee(employee)
+            print('Employee Created Successfully.')
+        except Exception as ex:
+            print(f"Duplicate employee id:{ex}")
+        except repo.SQLchemyError as ex:
+            print(f"Database error occurred while creating employee:{ex}")
 
-        print('Employee Created Successfully.')
+
     elif choice == 2:
         print('List of Employees:')
         for employee in repo.read_all_employee():
