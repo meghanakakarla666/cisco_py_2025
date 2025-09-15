@@ -1,0 +1,10 @@
+2025-09-15 09:23:42,464 - [INFO] - BEGIN (implicit)
+2025-09-15 09:23:42,466 - [INFO] - INSERT INTO flights (id, airline, origin, destination, price, is_active) VALUES (?, ?, ?, ?, ?, ?)
+2025-09-15 09:23:42,466 - [INFO] - [generated in 0.00023s] (12, 'indigo', 'india', 'uk', 9000.0, 1)
+2025-09-15 09:23:42,467 - [INFO] - COMMIT
+2025-09-15 09:23:42,469 - [INFO] - flight created successfully
+2025-09-15 09:23:45,298 - [INFO] - BEGIN (implicit)
+2025-09-15 09:23:45,299 - [INFO] - SELECT flights.id AS flights_id, flights.airline AS flights_airline, flights.origin AS flights_origin, flights.destination AS flights_destination, flights.price AS flights_price, flights.is_active AS flights_is_active 
+FROM flights
+2025-09-15 09:23:45,299 - [INFO] - [generated in 0.00013s] ()
+2025-09-15 09:23:45,300 - [INFO] - read all flights.
