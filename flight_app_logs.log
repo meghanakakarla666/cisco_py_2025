@@ -8,3 +8,42 @@
 FROM flights
 2025-09-15 09:23:45,299 - [INFO] - [generated in 0.00013s] ()
 2025-09-15 09:23:45,300 - [INFO] - read all flights.
+2025-09-16 08:25:45,361 - [INFO] - BEGIN (implicit)
+2025-09-16 08:25:45,366 - [INFO] - INSERT INTO flights (id, airline, origin, destination, price, is_active) VALUES (?, ?, ?, ?, ?, ?)
+2025-09-16 08:25:45,366 - [INFO] - [generated in 0.00050s] (1, 'indigo', 'india', 'uk', 9000.0, 1)
+2025-09-16 08:25:45,368 - [INFO] - COMMIT
+2025-09-16 08:25:45,369 - [INFO] - flight created successfully
+2025-09-16 08:25:47,318 - [INFO] - BEGIN (implicit)
+2025-09-16 08:25:47,320 - [INFO] - SELECT flights.id AS flights_id, flights.airline AS flights_airline, flights.origin AS flights_origin, flights.destination AS flights_destination, flights.price AS flights_price, flights.is_active AS flights_is_active 
+FROM flights
+2025-09-16 08:25:47,320 - [INFO] - [generated in 0.00016s] ()
+2025-09-16 08:25:47,320 - [INFO] - read all flights.
+2025-09-16 08:25:54,790 - [INFO] - SELECT flights.id AS flights_id, flights.airline AS flights_airline, flights.origin AS flights_origin, flights.destination AS flights_destination, flights.price AS flights_price, flights.is_active AS flights_is_active 
+FROM flights 
+WHERE flights.id = ?
+ LIMIT ? OFFSET ?
+2025-09-16 08:25:54,790 - [INFO] - [generated in 0.00061s] (12, 1, 0)
+2025-09-16 08:25:54,791 - [INFO] - read flight model.
+2025-09-16 08:25:54,791 - [INFO] - read flight for given id.
+2025-09-16 08:25:59,920 - [INFO] - SELECT flights.id AS flights_id, flights.airline AS flights_airline, flights.origin AS flights_origin, flights.destination AS flights_destination, flights.price AS flights_price, flights.is_active AS flights_is_active 
+FROM flights 
+WHERE flights.id = ?
+ LIMIT ? OFFSET ?
+2025-09-16 08:25:59,920 - [INFO] - [cached since 5.131s ago] (1, 1, 0)
+2025-09-16 08:25:59,921 - [INFO] - read flight model.
+2025-09-16 08:25:59,921 - [INFO] - read flight for given id.
+2025-09-16 08:26:02,899 - [INFO] - SELECT flights.id AS flights_id, flights.airline AS flights_airline, flights.origin AS flights_origin, flights.destination AS flights_destination, flights.price AS flights_price, flights.is_active AS flights_is_active 
+FROM flights 
+WHERE flights.id = ?
+ LIMIT ? OFFSET ?
+2025-09-16 08:26:02,899 - [INFO] - [cached since 8.11s ago] (1, 1, 0)
+2025-09-16 08:26:02,900 - [INFO] - read flight model.
+2025-09-16 08:26:02,901 - [INFO] - UPDATE flights SET price=? WHERE flights.id = ?
+2025-09-16 08:26:02,901 - [INFO] - [generated in 0.00026s] (456.0, 1)
+2025-09-16 08:26:02,902 - [INFO] - COMMIT
+2025-09-16 08:26:02,905 - [INFO] - flight with id=1 updated successfully
+2025-09-16 08:26:04,663 - [INFO] - BEGIN (implicit)
+2025-09-16 08:26:04,664 - [INFO] - SELECT flights.id AS flights_id, flights.airline AS flights_airline, flights.origin AS flights_origin, flights.destination AS flights_destination, flights.price AS flights_price, flights.is_active AS flights_is_active 
+FROM flights
+2025-09-16 08:26:04,664 - [INFO] - [cached since 17.34s ago] ()
+2025-09-16 08:26:04,665 - [INFO] - read all flights.
